@@ -13,6 +13,7 @@ import android.text.TextUtils
 import android.view.MenuItem
 import com.pluu.webtoon.R
 import com.pluu.webtoon.common.PrefConfig
+import com.pluu.webtoon.ui.login.LoginActivity
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -51,8 +52,12 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         override fun onPreferenceTreeClick(preference: Preference?): Boolean {
-            if (TextUtils.equals(LicenseActivity::class.java.canonicalName, preference?.fragment)) {
+           /* if (TextUtils.equals(LoginActivity::class.java.canonicalName, preference?.fragment)) {
                 startActivity(Intent(activity, LicenseActivity::class.java))
+                return true
+            }*/
+            if (TextUtils.equals(LoginActivity::class.java.canonicalName, preference?.fragment)) {
+                startActivity(Intent(activity, LoginActivity::class.java))
                 return true
             }
             return super.onPreferenceTreeClick(preference)
