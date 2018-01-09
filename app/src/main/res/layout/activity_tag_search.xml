@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="선호 태그 검색"
+        android:textSize="25sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:padding="5dp"
+            android:text="플랫폼"
+            android:textSize="15sp" />
+        <TableRow>
+            <me.gujun.android.taggroup.TagGroup
+                android:id="@+id/platform_tag_group"
+                style="@style/TagGroup"
+                app:atg_horizontalSpacing="10dp"
+                />
+        </TableRow>
+        <TextView
+            android:padding="5dp"
+            android:text="요일"
+            android:textSize="15sp" />
+        <TableRow>
+            <me.gujun.android.taggroup.TagGroup
+                android:id="@+id/daylist_tag_group"
+                style="@style/TagGroup" />
+        </TableRow>
+        <TextView
+            android:padding="5dp"
+            android:text="장르"
+            android:textSize="15sp" />
+        <TableRow>
+            <me.gujun.android.taggroup.TagGroup
+                android:id="@+id/genre_tag_group"
+                style="@style/TagGroup"
+                app:atg_horizontalSpacing="10dp"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

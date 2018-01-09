@@ -82,6 +82,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:${versions.kotlin_version}"
+
+    //tag group
+    compile 'me.gujun.android.taggroup:library:1.4@aar'
 }
 
 kapt {

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!--    <PreferenceScreen
+            android:fragment="com.pluu.webtoon.ui.login.LoginActivity"
+            android:title="@string/label_logout"
+            />-->
 
     <ListPreference
         android:defaultValue="@string/title_naver_key"
@@ -9,12 +15,19 @@
         android:key="default_webtoon"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
-        android:title="@string/label_default_webtoon"
-        />
+        android:title="@string/label_default_webtoon" />
 
     <PreferenceScreen
         android:fragment="com.pluu.webtoon.ui.settting.LicenseActivity"
-        android:title="@string/label_license"
-        />
+        android:title="@string/label_license" />
 
+    <Preference android:title="@string/label_login">
+        <intent android:action=".ui.login.LoginActivity"
+            />
+    </Preference>
+
+    <Preference android:title="@string/label_tag_select">
+        <intent android:action=".ui.TagSearchActivity"
+            />
+    </Preference>
 </PreferenceScreen>

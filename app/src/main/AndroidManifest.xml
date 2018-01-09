@@ -42,6 +42,23 @@
             android:label="@string/label_license"
             android:screenOrientation="portrait"
             android:theme="@style/BaeMaterialAppThemeToolBar"/>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/label_login">
+            <intent-filter>
+                <action android:name=".ui.login.LoginActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.login.RegistActivity"
+            android:label="@string/label_regist"/>
+        <activity android:name=".ui.TagSearchActivity">
+            <intent-filter>
+                <action android:name=".ui.TagSearchActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
