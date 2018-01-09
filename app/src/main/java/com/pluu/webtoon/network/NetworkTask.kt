@@ -9,7 +9,7 @@ import okhttp3.Request
 
 /**
  * Network Request Task
- * <br></br> 실제 Request 하는 로직
+ * 실제 Request 하는 로직
  * Created by pluu on 2017-05-02.
  */
 class NetworkTask(private val client: OkHttpClient) {

@@ -28,11 +28,13 @@ class MainActivity : BaseNavActivity(), MainFragment.BindServiceListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //액션바 설정
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setHomeButtonEnabled(true)
         }
 
+        //플랫폼에 따라 테마 설정
         selfNavDrawerItem = PrefConfig.getDefaultWebToon(this)
 
         themeChange(ThemeEvent(ContextCompat.getColor(this, selfNavDrawerItem.color),

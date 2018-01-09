@@ -33,7 +33,7 @@ class IntroActivity : Activity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe { _ ->
                     Log.i(TAG, "Login Process Complete")
-                    tvMsg.setText(R.string.msg_intro_complete)
+                    tvMsg.setText("로딩 완료")
                     progressBar.visibility = View.INVISIBLE
 
                     startActivity(Intent(this@IntroActivity, MainActivity::class.java))

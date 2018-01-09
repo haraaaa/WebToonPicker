@@ -36,6 +36,10 @@ class NaverDetailApi(context: Context) : AbstractDetailApi(context) {
             e.printStackTrace()
             ret.list = emptyList()
             return ret
+
+
+
+
         }
 
         ret.title = doc.select("div[class=chh] span, h1[class=tit]").first()?.text()

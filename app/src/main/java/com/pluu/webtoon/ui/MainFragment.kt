@@ -53,11 +53,13 @@ class MainFragment : Fragment() {
     private lateinit var serviceApi: AbstractWeekApi
     private var listener: BindServiceListener? = null
 
+    //웹툰 리스트 컨테이너
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_toon, container, false)
     }
 
+    //
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
