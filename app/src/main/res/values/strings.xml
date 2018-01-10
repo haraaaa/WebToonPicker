@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">웹툰Pick</string>
+    <string name="app_name">WebToonPicker</string>
 
     <string name="network_fail">통신에 실패했습니다. 잠시후 다시 시도해주세요.</string>
     <string name="msg_not_support">현재 성인, 과금 관련 메뉴 접근은 지원하지 않습니다.</string>
@@ -25,8 +25,8 @@
     <string name="favorite_add">즐겨찾기 추가</string>
     <string name="favorite_delete">즐겨찾기 제거</string>
 
-    <string name="msg_intro_ready">준비중이야&#8230; 기다려&#8230;</string>
-    <string name="msg_intro_complete">실행중입니다&#8230; 이제 갈거야&#8230;</string>
+    <string name="msg_intro_ready">준비중입니다&#8230;</string>
+    <string name="msg_intro_complete">실행중입니다&#8230;</string>
 
     <string name="label_first">첫화보기</string>
     <string name="label_share">Share</string>
@@ -43,16 +43,20 @@
     <string name="label_setting">설정</string>
     <string name="label_default_webtoon">기본 웹툰</string>
     <string name="label_license">오픈소스 라이센스</string>
+    <string name="label_tag_select">선호태그 선택</string>
+
+    <!-- Login -->
+    <string name="label_login">로그인</string>
+    <string name="label_logout">로그아웃</string>
+    <string name="label_regist">회원가입</string>
+    <string name="label_remember">Remember Me</string>
 
     <string name="not_support_type">현재 해당 웹툰은 지원하지 않습니다.</string>
 
     <string-array name="label_webtoon_list">
         <item>@string/title_naver</item>
         <item>@string/title_daum</item>
-        <item>@string/title_olleh</item>
         <item>@string/title_kakao_page</item>
-        <item>@string/title_nate</item>
-        <item>@string/title_t_store</item>
     </string-array>
 
     <string-array name="label_webtoon_value">

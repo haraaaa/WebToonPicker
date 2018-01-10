@@ -74,6 +74,7 @@
             android:layout_height="wrap_content"
             android:text="회원가입"
             android:textSize="20sp"
+            android:onClick="join"
             />
 
     </LinearLayout>
