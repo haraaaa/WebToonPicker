@@ -47,10 +47,10 @@ protected constructor(context: Context, private val CURRENT_TABS: Array<String>)
         fun getApi(context: Context, item: NAV_ITEM): AbstractWeekApi = when (item) {
             NAV_ITEM.NAVER -> NaverWeekApi(context)
             NAV_ITEM.DAUM -> DaumWeekApi(context)
-            NAV_ITEM.OLLEH -> OllehWeekApi(context)
+//            NAV_ITEM.OLLEH -> OllehWeekApi(context)
             NAV_ITEM.KAKAOPAGE -> KakaoWeekApi(context)
-            NAV_ITEM.NATE -> NateWeekApi(context)
-            NAV_ITEM.T_STORE -> TStorerWeekApi(context)
+//            NAV_ITEM.NATE -> NateWeekApi(context)
+//            NAV_ITEM.T_STORE -> TStorerWeekApi(context)
             else -> throw Resources.NotFoundException("Not Found API")
         }
     }
