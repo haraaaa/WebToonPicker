@@ -17,16 +17,18 @@
         android:positiveButtonText="@null"
         android:title="@string/label_default_webtoon" />
 
-    <PreferenceScreen
-        android:fragment="com.pluu.webtoon.ui.settting.LicenseActivity"
-        android:title="@string/label_license" />
 
-    <Preference android:title="@string/label_login">
+    <Preference android:title="@string/label_login"
+        android:key="login_title"
+        >
         <intent android:action=".ui.login.LoginActivity"
             />
     </Preference>
 
-    <Preference android:title="@string/label_tag_select">
+    <Preference android:title="@string/label_tag_select"
+        android:key="tag_select"
+        android:enabled="false"
+        >
         <intent android:action=".ui.TagSearchActivity"
             />
     </Preference>

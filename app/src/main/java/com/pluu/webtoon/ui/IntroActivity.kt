@@ -12,10 +12,6 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_intro.*
 import java.util.concurrent.TimeUnit
 
-/**
- * 인트로 화면 Activity
- * Created by pluu on 2017-05-07.
- */
 class IntroActivity : Activity() {
     private val TAG = IntroActivity::class.java.simpleName
 

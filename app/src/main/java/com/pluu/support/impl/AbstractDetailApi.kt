@@ -5,10 +5,7 @@ import android.content.res.Resources
 
 import com.pluu.support.daum.DaumDetailApi
 import com.pluu.support.kakao.KakaoDetailApi
-import com.pluu.support.nate.NateDetailApi
 import com.pluu.support.naver.NaverDetailApi
-import com.pluu.support.olleh.OllehDetailApi
-import com.pluu.support.tstore.TStoreDetailApi
 import com.pluu.webtoon.item.Detail
 import com.pluu.webtoon.item.Episode
 import com.pluu.webtoon.item.ShareItem
@@ -28,10 +25,10 @@ abstract class AbstractDetailApi(context: Context) : NetworkSupportApi(context) 
         fun getApi(context: Context, item: NAV_ITEM): AbstractDetailApi = when (item) {
             NAV_ITEM.NAVER -> NaverDetailApi(context)
             NAV_ITEM.DAUM -> DaumDetailApi(context)
-            NAV_ITEM.OLLEH -> OllehDetailApi(context)
+    //       NAV_ITEM.OLLEH -> OllehDetailApi(context)
             NAV_ITEM.KAKAOPAGE -> KakaoDetailApi(context)
-            NAV_ITEM.NATE -> NateDetailApi(context)
-            NAV_ITEM.T_STORE -> TStoreDetailApi(context)
+    //        NAV_ITEM.NATE -> NateDetailApi(context)
+     //       NAV_ITEM.T_STORE -> TStoreDetailApi(context)
             else -> throw Resources.NotFoundException("Not Found API")
         }
     }
