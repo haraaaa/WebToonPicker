@@ -130,12 +130,12 @@ public class LoginActivity extends AppCompatActivity {
         if(p.length() == 0 || u.length() == 0 ){
             Toast.makeText(this, "아이디와 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
+        }else {
+
+
+            Toast.makeText(this, "로그인 되었습니다", Toast.LENGTH_SHORT).show();
+            finish();
         }
-
-
-
-        Toast.makeText(this, "로그인 되었습니다",Toast.LENGTH_SHORT).show();
-        //new LoginThread().start();
 
     }
     class LoginThread extends Thread{
