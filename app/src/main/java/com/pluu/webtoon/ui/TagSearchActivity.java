@@ -16,7 +16,7 @@ public class TagSearchActivity extends AppCompatActivity{
         setContentView(R.layout.activity_tag_search);
 
         TagGroup platform_tag_group = (TagGroup) findViewById(R.id.platform_tag_group);
-        platform_tag_group.setTags(new String[]{"네이버", "다음", "카카오페이지", "레진코믹스", "붐툰"});
+        platform_tag_group.setTags(new String[]{"네이버", "다음", "카카오페이지"});
 
         TagGroup daylist_tag_group = (TagGroup) findViewById(R.id.daylist_tag_group);
         daylist_tag_group.setTags(new String[]{"월", "화", "수", "목", "금", "토", "일"});
