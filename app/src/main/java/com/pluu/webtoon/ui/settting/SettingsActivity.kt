@@ -4,6 +4,7 @@ import android.annotation.TargetApi
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.preference.ListPreference
 import android.support.v7.preference.Preference
@@ -16,6 +17,12 @@ import com.pluu.webtoon.common.PrefConfig
 import com.pluu.webtoon.ui.login.LoginActivity
 
 class SettingsActivity : AppCompatActivity() {
+
+
+    override fun onRestart() {
+        super.onRestart()
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,12 +63,16 @@ class SettingsActivity : AppCompatActivity() {
                 startActivity(Intent(activity, LicenseActivity::class.java))
                 return true
             }*/
+
+            Handler().postDelayed({
+                changeTitle()
+            }, 1000)
+
             if (TextUtils.equals(LoginActivity::class.java.canonicalName, preference?.fragment)) {
                 startActivity(Intent(activity, LoginActivity::class.java))
-                SettingFragment()
                 return true
             }
-            return super.onPreferenceTreeClick(preference)
+           return super.onPreferenceTreeClick(preference)
         }
 
         private val changeListener = Preference.OnPreferenceChangeListener { preference, newValue ->
@@ -85,6 +96,20 @@ class SettingsActivity : AppCompatActivity() {
                     PreferenceManager
                             .getDefaultSharedPreferences(preference.context)
                             .getString(preference.key, ""))
+
+        }
+
+        public fun changeTitle() {
+
+            var login_title = findPreference("login_title")
+            var tag_select = findPreference("tag_select")
+            if(login_title.title.equals("로그인")) {
+                login_title.setTitle("로그아웃")
+                tag_select.isEnabled = true
+            }else{
+                login_title.setTitle("로그인")
+                tag_select.isEnabled = false
+            }
         }
     }
 }
