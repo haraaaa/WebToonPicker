@@ -5,10 +5,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
+
 import android.preference.PreferenceFragment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceFragmentCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +42,19 @@ public class LoginActivity extends AppCompatActivity {
     Button regist;
     String u, p;
 
+    private static void setupAbout(PreferenceFragmentCompat fragment) {
+        Preference login_title = fragment.findPreference("login_title");
+        Preference tag_select = fragment.findPreference("tag_select");
+        if(login_title.getTitle().equals("로그인")) {
+            login_title.setTitle("로그아웃");
+            tag_select.setEnabled(true);
+        }else{
+            login_title.setTitle("로그인");
+            tag_select.setEnabled(false);
+        }
+
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         loginchk = (CheckBox) findViewById(R.id.loginchk);
         regist = (Button) findViewById(R.id.regist);
+
 
         loginchk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()   {
             @Override
@@ -131,8 +148,6 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "아이디와 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
         }else {
-
-
             Toast.makeText(this, "로그인 되었습니다", Toast.LENGTH_SHORT).show();
             finish();
         }
