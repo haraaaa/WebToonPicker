@@ -5,10 +5,9 @@ import android.content.res.Resources
 import android.support.v4.content.ContextCompat
 import com.pluu.support.daum.DaumWeekApi
 import com.pluu.support.kakao.KakaoWeekApi
-import com.pluu.support.nate.NateWeekApi
+
 import com.pluu.support.naver.NaverWeekApi
-import com.pluu.support.olleh.OllehWeekApi
-import com.pluu.support.tstore.TStorerWeekApi
+
 import com.pluu.webtoon.item.WebToonInfo
 import java.util.*
 
@@ -47,10 +46,10 @@ protected constructor(context: Context, private val CURRENT_TABS: Array<String>)
         fun getApi(context: Context, item: NAV_ITEM): AbstractWeekApi = when (item) {
             NAV_ITEM.NAVER -> NaverWeekApi(context)
             NAV_ITEM.DAUM -> DaumWeekApi(context)
-            NAV_ITEM.OLLEH -> OllehWeekApi(context)
+   //         NAV_ITEM.OLLEH -> OllehWeekApi(context)
             NAV_ITEM.KAKAOPAGE -> KakaoWeekApi(context)
-            NAV_ITEM.NATE -> NateWeekApi(context)
-            NAV_ITEM.T_STORE -> TStorerWeekApi(context)
+   //         NAV_ITEM.NATE -> NateWeekApi(context)
+   //         NAV_ITEM.T_STORE -> TStorerWeekApi(context)
             else -> throw Resources.NotFoundException("Not Found API")
         }
     }

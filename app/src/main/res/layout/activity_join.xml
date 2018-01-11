@@ -79,9 +79,9 @@
     </RadioGroup>
 
     <Button
+        android:id="@+id/confirmBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="connect"
         android:text="확인"
         android:textSize="20sp"
         android:layout_gravity="center"

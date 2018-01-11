@@ -58,6 +58,7 @@ class SettingsActivity : AppCompatActivity() {
             }*/
             if (TextUtils.equals(LoginActivity::class.java.canonicalName, preference?.fragment)) {
                 startActivity(Intent(activity, LoginActivity::class.java))
+                SettingFragment()
                 return true
             }
             return super.onPreferenceTreeClick(preference)

@@ -131,12 +131,15 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "아이디와 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
             return;
         }
-        new LoginThread().start();
+
+
+
+        Toast.makeText(this, "로그인 되었습니다",Toast.LENGTH_SHORT).show();
+        //new LoginThread().start();
 
     }
-
     class LoginThread extends Thread{
-        String addr = "http://10.10.12.71:8889/spring/login?userId="+u+"&password="+p;
+        String addr = "http://10.10.12.71:8889/webtoonpick/getLogin?userId="+u+"&password="+p;
 
         public void run(){
             try {

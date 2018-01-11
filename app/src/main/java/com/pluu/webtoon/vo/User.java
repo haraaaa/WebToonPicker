@@ -28,6 +28,12 @@ public class User {
         this.tag5 = tag5;
     }
 
+    public User(String id, String pw, String gender) {
+        super();
+        this.id = id;
+        this.pw = pw;
+        this.gender = gender;
+    }
 
 
     public String getId() {

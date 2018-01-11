@@ -41,28 +41,34 @@ public class RegistActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 id = ((EditText) findViewById(R.id.registerId)).toString().trim();
                 pw = ((EditText) findViewById(R.id.registerpassword)).toString().trim();
                 RadioGroup rg = (RadioGroup) findViewById(R.id.radios);
 
                 //예외처리
                 if (rg.getCheckedRadioButtonId() == 0){
-                    Toast.makeText(RegistActivity.this, "Please check your gender", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                gender = ((RadioButton)findViewById(rg.getCheckedRadioButtonId())).getText().toString().trim();
+                    Toast.makeText(RegistActivity.this, "성별을 입력해주세요", Toast.LENGTH_SHORT).show();
+                    //return;
+                }else {
+                    gender = ((RadioButton) findViewById(rg.getCheckedRadioButtonId())).getText().toString().trim();
 
-                if (id.equals("")){
-                    Toast.makeText(RegistActivity.this, "Please checkout your ID", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (pw.equals("")){
-                    Toast.makeText(RegistActivity.this, "Please checkout your Password", Toast.LENGTH_SHORT).show();
-                    return;
+                    if (id.equals("")) {
+                        Toast.makeText(RegistActivity.this, "ID를 확인해주세요", Toast.LENGTH_SHORT).show();
+                        //return;
+                    }else {
+                        if (pw.equals("")) {
+                            Toast.makeText(RegistActivity.this, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
+                            //return;
+                        }else{
+                            Toast.makeText(RegistActivity.this,"회원가입 완료",Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
                 }
 
 //                new JoinThread().start();
-                new Thread(){
+ /*               new Thread(){
                     @Override
                     public void run() {
                         String addr = "http://10.10.12.71:8889/webtoonpick/join?id="+id+"&pw="+pw+"&gender="+gender;
@@ -99,13 +105,13 @@ public class RegistActivity extends AppCompatActivity {
                         }
 
 
-                }.start();
-                Toast.makeText(RegistActivity.this,"제발1",Toast.LENGTH_SHORT).show();
+                }.start();*/
+
             }
         });
     }
 
-
+/*
     class JoinThread extends Thread{
         String addr = "http://10.10.12.71:8889/webtoonpick/join?id="+id+"&pw="+pw+"&gender="+gender;
 
@@ -141,6 +147,8 @@ public class RegistActivity extends AppCompatActivity {
             }
         }
     }
+
+    */
     // TextView에 데이터를 출력하는 역할 담당
     Handler handler = new Handler() {
         @Override
@@ -150,7 +158,6 @@ public class RegistActivity extends AppCompatActivity {
 
             if(message.equals("SUCCESS")){
                 Toast.makeText(RegistActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-                finish();
             }
             else{
                 Toast.makeText(RegistActivity.this,"회원가입 실패", Toast.LENGTH_SHORT).show();
@@ -158,3 +165,4 @@ public class RegistActivity extends AppCompatActivity {
         }
     };
 }
+

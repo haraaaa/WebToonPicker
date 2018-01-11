@@ -145,6 +145,7 @@ abstract class BaseNavActivity : AppCompatActivity() {
 
         if (selected) {
             view.setBackgroundResource(R.drawable.selected_navdrawer_item_background)
+
         } else {
             view.setBackgroundResource(R.drawable.selector_nav_item)
         }
