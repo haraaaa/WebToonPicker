@@ -106,10 +106,10 @@ class SettingsActivity : AppCompatActivity() {
             if(login_title.title.equals("로그인")) {
                 login_title.setTitle("로그아웃")
                 tag_select.isEnabled = true
-            }else{
+            }/*else{
                 login_title.setTitle("로그인")
                 tag_select.isEnabled = false
-            }
+            }*/
         }
     }
 }
